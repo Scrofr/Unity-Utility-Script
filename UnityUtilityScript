@@ -124,6 +124,10 @@ public class UnityUtilityScript : MonoBehaviour
         void OnTriggerEnter(Collider other)
         {
             Debug.Log("Trigger entered by " + other.gameObject.name);
+            if (other.CompareTag("Player"))
+            {
+                Debug.Log("Player");
+            }
         }
 
         // Use Physics.OverlapSphere to detect colliders in a sphere
